@@ -1,0 +1,39 @@
+saveOrUpdate behaviour/functionality changes as per identifier generation logic
+1) if generated identifier:  if primary key value is set will go for update
+				if primary key value is not set will go for inset
+
+
+			Account acc = new Account();
+			acc.setId(13);
+			acc.setName("Grish");
+			acc.setBalance(500000);
+			tx = session.beginTransaction();
+			
+			session.saveOrUpdate(acc);
+
+			here primary key is @GeneratedValue so here we have set id it will go directly for update.
+
+
+
+
+2) if assigned identifier
+			if you have set primary key it will first check whetehr that primary key record exists by firing select query first, if present record fire update else insert
+
+Account acc = new Account();
+			acc.setId(13);
+			acc.setName("Grish");
+			acc.setBalance(500000);
+
+Hibernate: select account_.acc_id, account_.balance as balance2_0_, account_.isActive as isactive3_0_, account_.name as name4_0_ from account_tbl account_ where account_.acc_id=?
+Hibernate: insert into account_tbl (balance, isActive, name, acc_id) values (?, ?, ?, ?)
+
+
+
+
+
+
+
+
+
+
+			

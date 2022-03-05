@@ -1,0 +1,93 @@
+Employee and address
+
+
+1 Employee -> many address
+
+
+
+
+
+
+
+class Employee{
+
+	
+	private int emp_id;
+	private String name;
+	private String emailId;
+
+	private List<Address> address;
+
+
+	//gettse and setters
+
+}
+
+
+Address address1 = new Adress();
+Address address2 = new Adress();
+
+
+Employee emp = new Employee();
+emp/setAddress(address1);
+
+
+
+
+
+
+class Address{
+	
+	private int add_id;
+	private String city;
+	private String country;
+	
+
+}
+
+
+
+
+
+
+
+Hibernate: create table Address (add_id number(10,0) not null, city varchar2(15 char), country varchar2(15 char), primary key (add_id))
+Hibernate: create table Employee (emp_id number(10,0) not null, emailId varchar2(20 char), name varchar2(15 char), primary key (emp_id))
+Hibernate: create table Employee_Address (Employee_emp_id number(10,0) not null, listAddress_add_id number(10,0) not null)
+Hibernate: alter table Employee_Address add constraint UK_opuo74kjddx1iuu7khpp9hh1y unique (listAddress_add_id)
+Hibernate: alter table Employee_Address add constraint FKhmg8br7ci9l7ofyx83lkgvbon foreign key (listAddress_add_id) references Address
+Hibernate: alter table Employee_Address add constraint FKc8vwp2npyf089s5ybwwkn07xt foreign ke
+
+
+
+
+
+
+
+
+Hibernate: create table Address (add_id number(10,0) not null, city varchar2(15 char), country varchar2(15 char), fk_emp_id number(10,0), primary key (add_id))
+Hibernate: create table Employee (emp_id number(10,0) not null, emailId varchar2(20 char), name varchar2(15 char), primary key (emp_id))
+Hibernate: alter table Address add constraint FKimr4trdykjusqei37kx8gry3a foreign key (fk_emp_id) references Employee
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

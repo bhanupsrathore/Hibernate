@@ -1,0 +1,56 @@
+acc = session.get(Account.class, id);		//persistent object
+
+eagerly loading
+
+//hit db and get record with that id
+
+
+//return null if obecjt doesnot existi in db,
+
+
+
+
+
+
+
+
+
+
+
+acc = session.load(Account.class, id);		//persistent object
+
+
+//lazy loading
+
+
+
+//hit the db
+//acc.getBalanc();
+//acc.getName();
+
+
+
+
+09, 2022 11:54:38 AM org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator initiateService
+INFO: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+Hibernate: select account0_.acc_id as acc_id1_0_0_, account0_.balance as balance2_0_0_, account0_.city as city3_0_0_, account0_.isActive as isactive4_0_0_, account0_.name as name5_0_0_ from Account_Tbl account0_ where account0_.acc_id=?
+Before merging
+Hibernate: select account0_.acc_id as acc_id1_0_0_, account0_.balance as balance2_0_0_, account0_.city as city3_0_0_, account0_.isActive as isactive4_0_0_, account0_.name as name5_0_0_ from Account_Tbl account0_ where account0_.acc_id=?
+After merging
+Hibernate: update Account_Tbl set balance=?, city=?, isActive=?, name=? where acc_id=?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+persistence.xml
+
+add jars
+
+write code of JPATest
+
+somring.save() ->  here we say account is getting saved. but we have inf in persistence.xml which database but no inf abt which table to be stired in.
+
+
+
+now to tell which table to be stored write in 
+
+@Entity
+@Id.
+
+
+
+

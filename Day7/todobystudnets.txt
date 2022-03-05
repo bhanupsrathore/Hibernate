@@ -1,0 +1,63 @@
+http://localhost:8055/HibernateJSTLTest
+
+contextRoot
+
+
+select count(cust_id) from customers where cust_id=? and pwd=?
+
+
+Restrictions -> cust_id=? and pwd=?
+count -> Projection
+
+
+
+
+
+Create class Counter;
+
+session.beginTransaction();
+
+Counter counter = sesssion.get(Counter.class, "orders");
+
+long value = counter.getCurrValue();
+long orderNo = 1000 + value;
+
+
+Order order = new Order();
+order.setOrderNo(orderNo);
+orser.setCustId(id);
+order.setPno(pno);
+order.setQty(qty);
+order.setOrderDate(new Date(System.currentTimeMillis());
+
+
+session.save(order);
+//incremt counter value;
+counter.setCurrvalue(++value);
+
+tx.commit();
+
+
+tx.rollback();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

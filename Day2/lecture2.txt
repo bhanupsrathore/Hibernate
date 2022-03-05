@@ -1,0 +1,72 @@
+COnfiguration is first object that gets created in Hibernate framework.
+
+
+
+
+SessionFactory is heavy weight object..
+
+Thread safe
+
+sessionFactory.openSession();
+
+
+
+Session
+
+session is a light weight object. 
+session is not thread safe.
+
+
+session.save(a);
+
+session.save(b);
+
+
+
+table order
+
+invoiceNo	year	date qty 	amount
+
+
+
+@Entity
+class Order implements Serializable{
+	
+	
+
+	@Id
+	private OrderKey orderkey;
+
+	private double amount;
+	private int qty;
+
+
+}
+
+
+class OrderKey implements Serializable{
+
+	
+	private int invoiceNo;	
+	private int year;
+
+}
+
+
+
+class Integer implements Serializble{
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

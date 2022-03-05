@@ -1,0 +1,39 @@
+CASH
+CHEQUE
+CARD
+
+
+pay_id
+amount
+Date
+
+BankName
+chqueno
+
+CardNo
+CardType
+
+
+class payment{
+	
+	pay_id;
+	amount;
+	Date;
+
+}
+
+
+class ChequePayment extends Payment{
+
+	String bankName;
+	String chequeNo;
+}
+
+
+class CardPayment extends Payment{
+
+	String CardNo;
+	String CardType;
+}
+
+

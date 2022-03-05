@@ -1,0 +1,11 @@
+ create table Account_Tbl (
+                    id int not null constraint idpktbl primary key,
+                    name varchar2(30),
+		    city varchar2(20),
+                    balance number(15, 4));
+					
+					
+					
+					
+					
+

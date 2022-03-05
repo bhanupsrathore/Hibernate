@@ -1,0 +1,32 @@
+create table Account_Tbl (id number(10,0) not null, balance double precision not null, city varchar2(255 char), isActive number(1,0) not null, name varchar2(255 char), primary key (id))
+
+
+
+create table Account_Tbl (id number(10,0) not null, balance double precision not null, city varchar2(30 char), isActive number(1,0) not null, name varchar2(30 char), primary key (id))
+
+
+create table Account_Tbl (acc_id number(10,0) not null, balance double precision not null, city varchar2(30 char), isActive number(1,0) not null, name varchar2(30 char), primary key (id))
+
+
+create table Account_Tbl (acc_id number(10,0) not null, balance double precision not null, city varchar2(30 char), isActive char(1 char) not null, name varchar2(30 char), primary key (acc_id));
+
+
+
+
+create table Account_Tbl (acc_id number(10,0) not null, balance double precision not null, city varchar2(30 char), isActive char(1 char) not null, name varchar2(30 char) not null, primary key (acc_id))
+
+
+
+create table Account_Tbl (acc_id number(10,0) not null, balance double precision not null, city varchar2(30 char), isActive char(1 char) not null, name varchar2(30 char) not null, primary key (acc_id))
+
+
+orcl 9 sequence // 
+
+orcl 10 or 11 sequence and identity //  sequence
+
+
+mysql //identity
+
+
+
+
